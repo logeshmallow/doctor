@@ -53,7 +53,7 @@
 		</header>
 
 		<div class="list-group list-group--action">
-			<% @categories.limit(5).each do |category| %>
+			<% @categories.each do |category| %>
 					<div class="list-group__wrap">
 						<a class="list-group__item" href="<%= edit_category_path(category) %>">
 							<div class="list-group__title"><%= category.title %></div>
@@ -81,7 +81,7 @@
 		</header>
 
 		<div class="list-group list-group--action">
-			<% @documents.limit(5).each do |document| %>
+			<% @documents.each do |document| %>
 				<div class="list-group__wrap">
 					<a class="list-group__item" href="<%= edit_document_path(document) %>">
 						<div class="list-group__title"><%= document.name %></div>

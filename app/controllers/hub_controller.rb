@@ -39,10 +39,10 @@ class HubController < ApplicationController
   end
   
   def dashboard
-     @categories = Category.all
+     @categories = Category.all.order('updated_at DESC').limit(5)
      @cat_count = Category.count
      
-     @documents = Document.all
+     @documents = Document.all.order('updated_at DESC').limit(5)
      @doc_count = Document.count
      
      @users = User.all
